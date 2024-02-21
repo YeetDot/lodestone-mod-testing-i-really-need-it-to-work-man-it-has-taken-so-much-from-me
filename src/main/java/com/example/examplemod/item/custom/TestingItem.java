@@ -1,6 +1,6 @@
 package com.example.examplemod.item.custom;
 
-import com.example.examplemod.lodestone_effects.ExampleEffect;
+import com.example.examplemod.lodestone_effects.ModEffects;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -23,7 +23,7 @@ public class TestingItem extends BowItem {
     public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
         if (entity instanceof LivingEntity livingEntity) {
             for (int i = 0; i < 100; i++) {
-                ExampleEffect.spawnAnotherEffect(entity, entity.level());
+                ModEffects.spawnExampleEffect(entity.level(), entity.position());
             }
         }
         return super.onLeftClickEntity(stack, player, entity);

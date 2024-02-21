@@ -1,6 +1,7 @@
 package com.example.examplemod.item;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -19,6 +20,9 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SAPPHIRE.get());
                         pOutput.accept(ModItems.SNIPER.get());
+                        pOutput.accept(ModItems.BULLET.get());
+
+                        pOutput.accept(ModBlocks.TEST_BLOCK.get());
                     })
                     .build());
 

@@ -1,5 +1,6 @@
 package com.example.examplemod;
 
+import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.item.ModCreativeModeTabs;
 import com.example.examplemod.item.ModItems;
 import com.mojang.logging.LogUtils;
@@ -49,6 +50,8 @@ public class ExampleMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         ModCreativeModeTabs.register(modEventBus);
 

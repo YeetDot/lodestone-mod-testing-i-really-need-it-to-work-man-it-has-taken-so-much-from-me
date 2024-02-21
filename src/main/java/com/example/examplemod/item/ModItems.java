@@ -3,6 +3,7 @@ package com.example.examplemod.item;
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.item.custom.SniperItem;
 import com.example.examplemod.item.custom.TestingItem;
+import net.minecraft.world.item.ArrowItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,6 +18,8 @@ public class ModItems {
             () -> new TestingItem(new Item.Properties()));
     public static final RegistryObject<Item> SNIPER = ITEMS.register("sniper",
             () -> new SniperItem(new Item.Properties()));
+    public static final RegistryObject<Item> BULLET = ITEMS.register("bullet",
+            () -> new ArrowItem(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {
